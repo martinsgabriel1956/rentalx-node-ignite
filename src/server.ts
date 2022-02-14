@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = 3333;
 
-app.use(categoriesRoutes);
+app.use('/categories', categoriesRoutes);
 
 app.use(express.json());
 
