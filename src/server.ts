@@ -6,8 +6,8 @@ const app = express();
 
 const PORT = 3333;
 
-app.use('/categories', categoriesRoutes);
-
 app.use(express.json());
+
+app.use('/categories', categoriesRoutes);
 
 app.listen(PORT, () => console.log('Server is running!'));
