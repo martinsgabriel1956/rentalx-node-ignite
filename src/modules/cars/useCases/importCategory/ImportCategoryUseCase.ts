@@ -26,10 +26,11 @@ class ImportCategoryUseCase {
           categories.push({ name, description });
         })
         .on('end', () => {
-          return resolve(categories);
+          fs.promises.unlink(file.path);
+          resolve(categories);
         })
         .on('error', err => {
-          return reject(err);
+          reject(err);
         });
     });
   }
