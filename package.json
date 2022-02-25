@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "repository": "git@github.com:martinsgabriel1956/rentalx-node-ignite.git",
   "author": "Gabriel Martins <martinsgabriel1956@gmail.com>",
