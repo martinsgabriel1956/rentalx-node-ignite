@@ -1,11 +1,11 @@
-version: "3.7"
+version: "3.9"
 
-services: 
+services:
   database:
     image: postgres
     container_name: db_ignite
     restart: always
-    ports: 
+    ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=docker
@@ -16,10 +16,12 @@ services:
   app:
     build: .
     container_name: rentx
-    ports: 
+    restart: always
+    ports:
       - 3333:3333
+      - 9229:9229
     volumes:
-      - .:/usr/app/rentx
+      - .:/usr/app
     links:
       - database
     depends_on:
